@@ -1,0 +1,324 @@
+<?
+$sub_menu = "200100";
+$mode = "popup";
+include_once("./_common.php");
+
+$sql_common = " from $g4[pibohum_base] ";
+
+$sub_title = "퇴직금정산";
+$g4[title] = $sub_title." : 노무관리 : 이지노무";
+
+$colspan = 11;
+
+// 로그인 시 사업자정보 로그인
+if($member['mb_id']) {
+	$sql_a4 = " select * from $g4[com_list_gy] where t_insureno = '$member[mb_id]' ";
+	$row_a4 = sql_fetch($sql_a4);
+}
+
+$sql1 = " select * from $g4[pibohum_base] where com_code='$code' and sabun='$id' ";
+//echo $sql1;
+$result1 = sql_query($sql1);
+$row1=mysql_fetch_array($result1);
+//현재 년도
+$now_year = date("Y");
+//날짜 형식 변경
+$in_day_array = explode('.', $row1['in_day']);
+$in_day = $in_day_array[0]."-".$in_day_array[1]."-".$in_day_array[2];
+$out_day_array = explode('.', $row1['out_day']);
+$out_day = $out_day_array[0]."-".$out_day_array[1]."-".$out_day_array[2];
+//근로자 정보가 없을 경우
+if(!$row1['name']) $row1['name'] = "홍길동";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title><?=$g4[title]?></title>
+<script type="text/javascript" language="javascript" src="js/retire_util.js"></script>
+<script type="text/javascript" language="javascript" src="js/retire_cal.js"></script>
+<link href="css/popup.css" rel="stylesheet" type="text/css" />
+</head>
+<!--<body onload="setCurrYear()">-->
+<body>
+<script language="javascript">
+function data_submit(id) {
+	var frm = document.form1;
+	if (frm.termDays.value == "")
+	{
+		alert("퇴직일자 입력 후 이용 바랍니다.");
+		return;
+	}
+	if (frm.retirePay.value == "")
+	{
+		alert("퇴직금 관련 임금 입력 후 이용 바랍니다.");
+		return;
+	}
+	if(id == 1) frm.action = "retirement_pay_calculate.php";
+	else frm.action = "retirement_pay_calculate_excel.php";
+	frm.submit();
+	return;
+}
+</script>
+<!--<form name="form1" action="retirement_pay_calculate.php" >-->
+<form name="form1" action="retirement_pay_calculate_excel.php" >
+<input type="hidden" name="biz_no" value="<?=$row_a4['biz_no']?>" />
+<input type="hidden" name="com_name" value="<?=$row_a4['com_name']?>" />
+<input type="hidden" name="boss_name" value="<?=$row_a4['boss_name']?>" />
+<input type="hidden" name="name" value="<?=$row1['name']?>" />
+<input type="hidden" name="jumin_no" value="<?=$row1['jumin_no']?>" />
+<input type="hidden" name="in_day" value="<?=$in_day?>" />
+<input type="hidden" name="out_day" value="<?=$out_day?>" />
+<input type="hidden" name="control"/>
+<input type="hidden" name="index_value"/>
+<div class="popup" style="float:left;">
+    <h1>
+			* 퇴직금 계산
+			/ <?=$row_a4['com_name']?>
+			/ 근로자 <?=$row1['name']?>
+		</h1>
+    <div class="content">
+        
+		<dl class="search">
+            <dt><label for="syear">입사일자:</label></dt>
+            <dd>
+            <select name="syear" id="syear" title="입사 년">
+<?
+//echo $row1[in_day];
+for($i=$now_year;$i>1959;$i--) {
+	$in_day = explode(".",$row1[in_day]);
+	//echo strlen($in_day[0]);
+	if(strlen($in_day[0]) != 4) $in_day = explode("-",$row1[in_day]);
+?>
+                <option value="<?=$i?>" <? if($in_day[0] == $i) echo "selected"; ?> ><?=$i?></option>
+<?
+}
+?>
+            </select>						
+            년 
+            <select name="smon"  title="입사 월">			
+<?
+for($i=1;$i<13;$i++) {
+	if(strlen($in_day[1]) == 2) {
+		if(substr($in_day[1], 0, 1) == 0) $in_day[1] = substr($in_day[1], 1, 1);
+	}
+?>
+                <option value="<?=$i?>" <? if($in_day[1] == $i) echo "selected"; ?> ><?=$i?></option>
+<?
+}
+?>
+            </select> 월
+            <select name="sday"  title="입사 일">				
+<?
+for($i=1;$i<32;$i++) {
+	if(strlen($in_day[2]) == 2) {
+		if(substr($in_day[2], 0, 1) == 0) $in_day[2] = substr($in_day[2], 1, 1);
+	}
+?>
+                <option value="<?=$i?>" <? if($in_day[2] == $i) echo "selected"; ?> ><?=$i?></option>
+<?
+}
+?>
+            </select> 일
+            </dd>
+            <dt><label for="eyear">퇴직일자:</label></dt>
+            <dd>
+            <select name="eyear" id="eyear" title="퇴직 년">							
+<?
+for($i=$now_year+2;$i>1959;$i--) {
+	$out_day = explode(".",$row1[out_day]);
+	//echo strlen($out_day[0]);
+	if(strlen($out_day[0]) != 4) $out_day = explode("-",$row1[out_day]);
+?>
+                <option value="<?=$i?>" <? if($out_day[0] == $i) echo "selected"; ?> ><?=$i?></option>
+<?
+}
+?>
+            </select>&nbsp;년 
+            <select name="emon" title="퇴직 월">							
+<?
+for($i=1;$i<13;$i++) {
+	if(strlen($out_day[1]) == 2) {
+		if(substr($out_day[1], 0, 1) == 0) $out_day[1] = substr($out_day[1], 1, 1);
+	}
+?>
+                <option value="<?=$i?>" <? if($out_day[1] == $i) echo "selected"; ?> ><?=$i?></option>
+<?
+}
+?>
+            </select> 월  
+            <select name="eday" title="퇴직 일">				
+<?
+for($i=1;$i<32;$i++) {
+	if(strlen($out_day[2]) == 2) {
+		if(substr($out_day[2], 0, 1) == 0) $out_day[2] = substr($out_day[2], 1, 1);
+	}
+?>
+                <option value="<?=$i?>" <? if($out_day[2] == $i) echo "selected"; ?> ><?=$i?></option>
+<?
+}
+?>				
+            </select> 일
+            </dd>
+            <dt><label for="termDays">재직일수:</label></dt>
+            <dd>
+							<input type="text" name="termDays" id ='termDays' size="7" title="재직일수"/> 일
+							<span class="btn3"><input type="button" value="기간보기"  onclick="javascript:setDate()" onkeypress="javascript:setDate()" title="클릭하면 평균임금계산 기간을 화면에 보여줍니다"/></span><br />
+            </dd>
+						<dd style="padding : 5px 0 5px 0;">
+							※ 퇴직일자는 마지막으로 근무한 날의 다음날자를 기재.<br />
+							※ 재직일수 중 제외기간이 있는 경우는 [재직일수]를 수정할 것.
+						</dd>
+        </dl>
+				<span class="btn2"><input type="button" value="임금초기화"  onclick="payreset()" onkeypress="payreset()" title="임금을 0으로 초기화합니다"/></span>
+        <table summary="퇴직전 3개월 임금 총액 계산" >
+        <caption>▣ 퇴직전 3개월 임금 총액 계산</caption>               
+					<tr> 					
+						<th scope="col">기간</th>
+						<th scope="col">기간별일수</th>
+						<th scope="col">기본급</th>
+						<th scope="col">기타수당</th>
+					</tr>	
+					<tr> 					
+						<td scope="row">
+							<input type="text" name="fymd1" size="10" class="non2" readonly="readonly" title="시작일"/><br /> 
+							<input type="text" name="tymd1" size="11"  class="non2" readonly="readonly" title="종료일"/>
+						</td>
+						<td class="right"><input type="text" name="cntday1" size="2" title="기간" onfocus='if(this.value == "0"){this.value="";}' onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)'/>일</td>
+						<td><input type="text" name="basic1" size="8" value="0"  onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)' onkeyup="checkThousand(this.value, '1','Y')" onfocus='if(this.value == "0"){this.value="";}' title="기본급"/>원</td>
+						<td><input type="text" name="bonus1" size="8" value="0" onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)' onkeyup="checkThousand(this.value, '2','Y')" onfocus='if(this.value == "0"){this.value="";}' title="기타수당"/>원</td>
+					</tr>
+					<tr> 					
+						<td scope="row">
+						<input type="text" name="fymd2" size="10" class="non2" readonly="readonly" title="시작일"/> <br />
+						<input type="text" name="tymd2" size="11" class="non2" readonly="readonly" title="종료일"/>
+						</td>
+						<td class="right"><input type="text" name="cntday2" size="2"  title="기간" onfocus='if(this.value == "0"){this.value="";}' onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)'/>일</td>
+						<td><input type="text" name="basic2" size="8" value="0"           onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)'   onkeyup="checkThousand(this.value, '3','Y')" onfocus='if(this.value == "0"){this.value="";}' title="기본급"/>원</td>
+						<td><input type="text" name="bonus2" size="8" value="0"           onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)' onkeyup="checkThousand(this.value, '4','Y')" onfocus='if(this.value == "0"){this.value="";}' title="기타수당"/>원</td>
+					</tr>
+					<tr> 					
+						<td scope="row"><input type="text" name="fymd3" size="10"  class="non2" readonly="readonly" title="시작일"/> <br />
+						<input type="text" name="tymd3" size="11"  class="non2" readonly="readonly" title="종료일"/>
+						</td>
+						<td class="right"><input type="text" name="cntday3" size="2" title="기간" onfocus='if(this.value == "0"){this.value="";}' onblur='if(this.value ==""){ this.value="0"};javascript:sumPay(this)'/>일</td>
+						<td><input type="text" name="basic3" size="8" value="0" onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)' onkeyup="checkThousand(this.value, '5','Y')" onfocus='if(this.value == "0"){this.value="";}' title="기본급"/>원</td>
+						<td><input type="text" name="bonus3" size="8" value="0" onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)' onkeyup="checkThousand(this.value, '6','Y')" onfocus='if(this.value == "0"){this.value="";}' title="기타수당"/>원</td>
+					</tr>
+					<tr> 					
+						<td scope="row"><input type="text" name="fymd4" size="10"  class="non2" readonly="readonly" title="시작일"/><br />
+						<input type="text" name="tymd4" size="11"  class="non2" readonly="readonly" title="종료일"/>
+						</td>
+						<td class="right"><input type="text" name="cntday4" size="2" title="기간" onfocus='if(this.value == "0"){this.value="";}' onblur='if(this.value ==""){ this.value="0"};javascript:sumPay(this)'/>일</td>
+						<td><input type="text" name="basic4" size="8" value="0" onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)' onkeyup="checkThousand(this.value, '7','Y')" onfocus='if(this.value == "0"){this.value="";}' title="기본급"/>원</td>
+						<td><input type="text" name="bonus4" size="8" value="0" onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"};javascript:sumPay(this)' onkeyup="checkThousand(this.value, '8','Y')" onfocus='if(this.value == "0"){this.value="";}' title="기타수당"/>원</td>
+					</tr>
+					<tr class="end"> 					
+						<td scope="row"><label for="sumday">합계</label></td>
+						<td class="right"><input type="text" name="sumday" id ="sumday" size="2" class="non2" readonly="readonly"/>일</td>
+						<td><input type="text" name="sumbasic" size="8" class="non2" readonly="readonly" title="기본급합계"/>원</td>
+						<td><input type="text" name="sumbonus" size="8" class="non2" readonly="readonly" title="기타수당합계"/>원</td>
+					</tr>
+				</table>
+				<div style="margin-top : 5px;">※ 기간별 일수는 제외하여야 할 날이 있을 경우 수정 가능</div>
+					<dl>
+            <dt style="width:113px">연간상여금 총액 :</dt>
+            <dd><input type="text" name="annualBonus" size="8" value="0" onkeyup="checkThousand(this.value, '9','Y')" onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"}' onfocus='if(this.value == "0"){this.value="";}' title="연간상여금총액"/>원</dd>
+            <dt style="width:113px">연차수당 : </dt>
+            <dd><input type="text" name="vacaBunus" size="8" value="0" onkeyup="checkThousand(this.value, '10','Y')" onkeydown="fn_onKeyOnlyNumber()" onblur='if(this.value ==""){ this.value ="0"}' onfocus='if(this.value == "0"){this.value="";}' title="연차수당"/>원</dd>
+					</dl>
+					<dl>
+            <dt>1일 평균임금 : </dt>
+            <dd><input type="text" name="avrPay" size="10" onkeydown="fn_onKeyOnlyNumber()" onkeyup="checkThousand(this.value, '11','Y')" title="1일 평균임금"/>원
+            <span class="btn4"><input type="button" value="평균임금계산"  onclick="javascript:avrPayCal()" onkeypress="javascript:avrPayCal()" title="클릭하면 평균임금계산 결과를 보여줍니다"/></span></dd>				  
+            <dt>1일 통상임금 : </dt>
+            <dd><input type="text" name="comPay" size="10" onkeydown="fn_onKeyOnlyNumber()" onkeyup="checkThousand(this.value, '12','Y')" title="1일 통상임금"/>원</dd>
+            <dt>퇴직금 : </dt>
+            <dd>
+							<input type="text" name="retirePay" size="15"  style='text-align: right'  readonly="readonly" title="퇴직금"/>원
+							<span class="btn4"><input type="button" value="퇴직금계산"  onclick="javascript:calRet()" onkeypress="javascript:calRet()" title="클릭하면 퇴직금계산 결과를 보여줍니다"/></span>
+							<span class="btn5"><input type="button" value="엑셀"  onclick="javascript:data_submit(1)" title="클릭하면 퇴직금계산 결과를 엑셀로 보여줍니다"/></span>
+							<span class="btn5"><input type="button" value="영수증"  onclick="javascript:data_submit(2)" title="클릭하면 퇴직금계산 결과를 엑셀로 보여줍니다"/></span>
+            </dd>
+					</dl>
+					* 1일 통상임금이 1일 평균임금보다 클 경우 1일 통상임금을 기준으로<br />&nbsp; 퇴직금이 계산됩니다.
+			</div>
+    </div>
+		<!--에제 설명 -->
+		<div class="ex"  style="float:left;">
+			<h1>* 퇴직금계산 예제 *</h1>
+			<div class="content">
+			· 입사일자 : 2010년 10월 2일 <br />
+			· 퇴사일자 : 2013년 9월 16일<br />        
+			· 재직일수 : 1080일<br />
+			· 월기본급 : 1,500,000원 <br />
+			· 월기타수당 : 240,000원<br />
+			· 연간 상여금 : 4,000,000원 <br />
+			· 연차수당 지급기준액 : 20,000원<br />
+			· 연차수당은 퇴직 전전년도(2011년)에 발생한 휴가중 <br />
+			&nbsp; 퇴직 전년도(2012년)에 미사용한 휴가일수분의 합계
+			<table summary="퇴직전 3개월간 임금총액" class="ex_t">
+			<caption>가. 퇴직전 3개월간 임금총액</caption>
+					<tr>
+					 <th scope="col">기간</th>
+					 <th scope="col">기간별일수</th>
+					 <th scope="col">기본급</th>
+					 <th scope="col">기타수당</th>
+					</tr>
+					<tr>
+					 <td scope="row">2013.6.16 &nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;~ 2013.6.30 </td>
+					 <td>15일</td>
+					 <td>750,000원</td>
+					 <td>120,000원</td>
+					</tr>
+					<tr>
+					 <td scope="row">2013.7.1 &nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;~ 2013.7.31 </td>
+					 <td>31일</td>
+					 <td>1,500,000원</td>
+					 <td>240,000원</td>
+					</tr>
+					<tr>
+					 <td scope="row">2013.8.1 &nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;~ 2013.8.31 </td>
+					 <td>31일</td>
+					 <td>1,500,000원</td>
+					 <td>240,000원</td>
+					</tr>
+					<tr>
+					 <td scope="row">2013.9.1&nbsp;&nbsp;&nbsp;<br /> &nbsp;&nbsp;~ 2013.9.15 </td>
+					 <td>15</td>
+					 <td>750,000원</td>
+					 <td>120,000원</td>
+					</tr>
+					<tr>
+					 <td scope="row">합계</td>
+					 <td>92일</td>
+					 <td>4,500,000원</td>
+					 <td>720,000원</td>
+					</tr>
+			</table>
+			<br />
+			나. 평균임금의 산정
+			연간상여금 <br />
+			총액 : 4,000,000 원<br />
+			 연차수당 : 200,000원  (20,000 원 &times; 10일)<br />		
+			A. 3개월간 임금총액 : 5,220,000 원 = 4,500,000원 + 720,000원<br />
+			B. 상여금 가산액: 1,000,000원 = 4,000,000원 &times; (3/12)<br />
+			C. 연차수당 가산액 : 50,000원 = (20,000원&times;10일) &times; (3/12)<br />
+			1일평균임금 = 퇴직일 이전 3개월간에 지급 받은 임금총액 (A+B+C)/퇴직일 이전 3개월간의 총 일 수
+			<br />
+			<strong>68,152원 18전 = (5,220,000원+1,000,000원+50,000원)/92</strong><br />
+			<br />
+			다. 퇴직금 = 1일 평균임금 &times; 30(일) &times; (근속년수+1년 미만 기간의 일수/365) 
+			<br/>
+			<br />
+			6,049,665원 =&nbsp;1일 평균임금 68,152원 18전&times;30일 &times; (2년 + 360일/365일) 
+			<br/>
+			* 기타수당이 평균임금에 포함되는지 여부에 따라 퇴직금 총액에 차이 발생<br />
+			* 자세한 내용은 [정책마당 - 근로개선 - 근로기준보호 - 퇴직급여]을 참고
+		</div>
+	</div>
+	<br/>
+	<input type="image" value="" title="" alt="" style="display:none;"/>
+</form>
+</body>
+</html>
