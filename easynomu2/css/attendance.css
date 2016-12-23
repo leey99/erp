@@ -1,0 +1,87 @@
+body, td, p, input, button, textarea, select, .c1 { font-family:Tahoma,굴림; font-size:9pt; color:#222222; }
+
+/* 폼 속성 */
+.bbs_form { margin:0; }
+.bbs_ft   { border-color:#dadada; border-style:solid; border-width:1px; }
+.bbs_ft1  { background-color:#000000; color:#ffffff;}
+.bbs_fa   { border:1px solid #dadada; width:98%; line-height:150%; }
+
+/* 표 여백 */
+.bbs_pl { PADDING-LEFT : 15px; }
+.bbs_pr { PADDING-RIGHT :15px; }
+.bbs_pt { PADDING-TOP :   5px; }
+.bbs_pp { PADDING :       5px; }
+
+/* 표 색상 */
+.bbs_head   { background-color:#a2c0e7; height:34px; }
+.bbs_line1  { background-color:#ffffff; height:1px; }
+.bbs_line2  { background-color:#646464; height:1px; }
+.bbs_notice { background-color:#F5F5F5; }
+
+.tbline1   {border-bottom: 1px solid #D7D7D7; border-right: 1px solid #D7D7D7; }
+.tbline2   {border-bottom: 1px solid #eeeeee; border-left: 1px solid #eeeeee;padding:4px;}
+.tbline3   {border-bottom: 1px solid #eeeeee;}
+
+/* 글자 속성 */
+.bbs_fhead   { color:#ffffff; font-weight:bold;}
+.bbs_fs      { color:#888888; font-size:11px; }
+.bbs_content { color:#000000; }
+
+/* 마우스 속성 */
+.bbs_point { CURSOR: pointer; }
+
+/* view comment */
+.c_tc { word-break:break-all; text-align:justify; color:#575757; line-height:150%; background:#F9F9F9; padding:8px;}
+.c_tl { background-color:#DADADA; height:1px; }
+
+#box_day {
+	width: 3%; padding-top: 4px; padding-left: 7px; font-family: 돋움; font-size: 12px; font-weight: bold; float: left;
+}
+#box_list {
+	width: 97%;
+}
+#box_list2 {
+	padding: 5px 7px; width: 97%;
+}
+a.day1:link {
+	color: rgb(158, 158, 158); font-size: 14px; text-decoration: none;
+}
+a.day1:visited {
+	color: rgb(158, 158, 158); font-size: 14px; text-decoration: none;
+}
+a.day1:active {
+	color: rgb(158, 158, 158); font-size: 14px; text-decoration: none;
+}
+a.day1:hover {
+	color: rgb(158, 158, 158); font-size: 16px; font-weight: bold; text-decoration: underline;
+}
+a.day2:link {
+	color: rgb(158, 158, 158); font-size: 14px; text-decoration: none;
+}
+a.day2:visited {
+	color: rgb(158, 158, 158); font-size: 14px; text-decoration: none;
+}
+a.day2:active {
+	color: rgb(158, 158, 158); font-size: 14px; text-decoration: none;
+}
+a.day2:hover {
+	color: rgb(158, 158, 158); font-size: 16px; font-weight: bold; text-decoration: underline;
+}
+a.day3:link {
+	color: rgb(158, 158, 158); font-size: 14px; text-decoration: none;
+}
+a.day3:visited {
+	color: rgb(158, 158, 158); font-size: 14px; text-decoration: none;
+}
+a.day3:active {
+	color: rgb(158, 158, 158); font-size: 14px; text-decoration: none;
+}
+a.day3:hover {
+	color: rgb(158, 158, 158); font-size: 16px; font-weight: bold; text-decoration: underline;
+}
+.day4 {
+	color: rgb(22, 65, 178); font-size: 20px;
+}
+.day5 {
+	color: rgb(108, 145, 195); font-family: 돋움; font-size: 14px;
+}

@@ -1,0 +1,8 @@
+<script>
+ try{
+  if(parseInt(this.style.height)<this.scrollHeight){
+   this.style.height = this.scrollHeight;
+  }
+ }catch(e){
+ }
+</script>

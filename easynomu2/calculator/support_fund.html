@@ -1,0 +1,198 @@
+<?
+$sub_menu = "500100";
+include_once("./_common.php");
+
+$sub_title = "정부지원금 계산기";
+$g4[title] = $sub_title." : 노무관리 : 이지노무";
+
+$colspan = 11;
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title><?=$g4[title]?></title>
+<link href="css/popup.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="" style="margin:0">
+<style type="text/css">
+html {
+	margin: 0px; padding: 0px;
+}
+body {
+	margin: 0px; padding: 0px;
+}
+div {
+	margin: 0px; padding: 0px;
+}
+span {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+dt {
+	margin: 0px; padding: 0px;
+}
+dd {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+blockquote {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+address {
+	margin: 0px; padding: 0px;
+}
+pre {
+	margin: 0px; padding: 0px;
+}
+cite {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+fieldset {
+	margin: 0px; padding: 0px;
+}
+input {
+	margin: 0px; padding: 0px;
+}
+textarea {
+	margin: 0px; padding: 0px;
+}
+select {
+	margin: 0px; padding: 0px;
+}
+table {
+	margin: 0px; padding: 0px;
+}
+th {
+	margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+legend {
+	margin: 0px; padding: 0px;
+}
+label {
+	margin: 0px; padding: 0px;
+}
+img {
+	border: 0px currentColor;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="contents.css" />
+<div id="moneyMavgbosuCalculator" style="">
+	<form id="calPrintFrom" style="display: none;" action="support_fund.html" method="POST"></form>
+	<div id="ccWrap">
+		<div><img src="./images/tip1.jpg"></div>
+		<div class="calculaterFormLayer" id="calculaterFormLayer">
+			<dl class="conBlock" id="moneyCalculaterForm">
+				<dt><img alt="근로자의 보수를 입력해 주세요!" src="./images/title1.jpg"></dt>
+				<dd><label for="mavgbosu1">근로자1</label><input name="mavgbosu" class="PopInput" id="mavgbosu1" type="text" value="0"></dd>
+				<dd><label for="mavgbosu2">근로자2</label><input name="mavgbosu" class="PopInput" id="mavgbosu2" type="text" value="0"></dd>
+				<dd><label for="mavgbosu3">근로자3</label><input name="mavgbosu" class="PopInput" id="mavgbosu3" type="text" value="0"></dd>
+				<dd><label for="mavgbosu4">근로자4</label><input name="mavgbosu" class="PopInput" id="mavgbosu4" type="text" value="0"></dd>
+				<dd><label for="mavgbosu5">근로자5</label><input name="mavgbosu" class="PopInput" id="mavgbosu5" type="text" value="0"></dd>
+				<dd><label for="mavgbosu6">근로자6</label><input name="mavgbosu" class="PopInput" id="mavgbosu6" type="text" value="0"></dd>
+				<dd><label for="mavgbosu7">근로자7</label><input name="mavgbosu" class="PopInput" id="mavgbosu7" type="text" value="0"></dd>
+				<dd><label for="mavgbosu8">근로자8</label><input name="mavgbosu" class="PopInput" id="mavgbosu8" type="text" value="0"></dd>
+				<dd><label for="mavgbosu9">근로자9</label><input name="mavgbosu" class="PopInput" id="mavgbosu9" type="text" value="0"></dd>
+			</dl>
+			<div class="btnset1" style="margin:10px 0 0 0">
+				<a class="hand" id="btnCalculater" onclick="document.getElementById('calculaterGridLayer').style.display='block';document.getElementById('calculaterFormLayer').style.display='none';"><img alt="지원금 확인하기" src="./images/btnConfirm.gif"></a>
+			</div>
+		</div>
+
+		<div class="calculaterGridLayer" id="calculaterGridLayer" style="display: none;">
+			<div><img alt="고용보험ㆍ국민연금 부과보험료 및 지원액 내역 : 실제 공단에 반영된 보수와 다를 경우 지원금이 다를 수 있습니다." src="./images/title2.jpg"></div>
+			<table class="ccGrid">
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>근로자명</th>
+					<th>월평균<br>
+						보수(원)</th>
+					<th width="100">사용자/근로자<br>
+						부담 보험료</th>
+					<th width="120">고용보험<br>
+						부과보험료</th>
+					<th width="120">고용보험<br>
+						지원액</th>
+					<th width="120">국민연금<br>
+						부과보험료</th>
+					<th width="120">국민연금<br>
+						지원액</th>
+				</tr>
+				</thead>
+				<tbody id="moneyCalculaterTbody">
+					<tr><td height="16">1</td><td>근로자1</td><td>1000,000</td><td>1 / 2 지원</td><td>15,500</td><td>7,750</td><td>90,000</td><td>45,000</td></tr>
+					<tr><td height="16">2</td><td>근로자2</td><td>1200,000</td><td>1 / 2 지원</td><td>18,600</td><td>9,300</td><td>108,000</td><td>54,000</td></tr>
+					<tr><td height="16">3</td><td>근로자3</td><td>0</td><td>지원제외</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+					<tr><td height="16">4</td><td>근로자4</td><td>0</td><td>지원제외</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+					<tr><td height="16">5</td><td>근로자5</td><td>0</td><td>지원제외</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+					<tr><td height="16">6</td><td>근로자6</td><td>0</td><td>지원제외</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+					<tr><td height="16">7</td><td>근로자7</td><td>0</td><td>지원제외</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+					<tr><td height="16">8</td><td>근로자8</td><td>0</td><td>지원제외</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+					<tr><td height="16">9</td><td>근로자9</td><td>0</td><td>지원제외</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+				</tbody>
+				<tfoot id="moneyCalculaterTtoot">
+				<tr>
+					<td class="resultTxt" colspan="4" height="18">월부과보험료 및 지원액의 합계</td>
+					<td><strong id="gyTaxSum">34,100</strong></td>
+					<td><strong id="gySupportSum">17,050</strong></td>
+					<td><strong id="kmTaxSum">198,000</strong></td>
+					<td><strong id="kmSupportSum">99,000</strong></td>
+				</tr>
+				<tr>
+					<td class="resultTxt" colspan="4" height="18">부과보험료 대비 지원액 비율</td>
+					<td class="center" colspan="2"><strong id="gyTaxPercent">50%</strong></td>
+					<td class="center" colspan="2"><strong id="kmTaxPercent">50%</strong></td>
+				</tr>
+				</tfoot>
+			</table>
+			
+			<p align="center">
+				<a class="hand" id="btnCalculaterPrev" onclick="document.getElementById('calculaterGridLayer').style.display='none';document.getElementById('calculaterFormLayer').style.display='block';"><img alt="이전으로" src="./images/btnPrevStep.jpg"></a>
+				<a class="hand" onclick="doCalculatorPrint();"><img alt="인쇄하기" src="./images/btnPrint.jpg"></a>
+				<!--<a class="hand" onclick="OpenWindow('/kms_member/kms_join1.jsp','600','600');"><img alt="무료보험사무위탁신청" src="./images/btnApply.jpg"></a>-->
+			</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

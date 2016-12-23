@@ -1,0 +1,70 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><img src="./images/title3.gif" width="218" height="40" border="0"></td>
+                <td align="right">
+<img src="./images/category_br.jpg" width="13" height="3" border="0" align="absmiddle"><a href="/" class="bmain">홈</a> <span class="bmain">&gt;</span> <a href="/s_cc/s1.jsp" class="bmain">산출계산기</a> <span class="bmain">&gt;</span>
+                  <span class="cld_redtext"><strong>세금계산기</strong></span></td>
+              </tr>
+            </table></td>
+            </tr>
+          <tr>
+            <td height="20">
+
+<!-- 시작 -->
+
+<style>
+	.calculation {border-spacing:0px;padding:0px;border-collapse:collapse;font-size:9pt;}
+	.calculation td {text-align:right;font-family:'돋움';padding:5px; border:1px solid gray;word-break: break-all;table-layout: fixed}
+	.calculation .number {color:#9900CC;font-size:12px;font-weight:bold;text-align:right;font-family:'verdana';padding:5px; border:1px solid gray;}
+	.calculation th{text-align:left;font-family:'돋움';padding:5px; border:1px solid gray; background-color:#F3F3F3}
+</style>
+
+<br>
+<div id="ID_ME">
+
+<table width=100% class="calculation">
+<col width=200><col width="250"><col width="*">
+<tr>
+	<th style="text-align:center">구분</th>
+	<th style="text-align:center">월 원천징수세액</th>
+	<th style="text-align:center">년 원천징수세액 (12개월)</th>
+</tr>
+<tr>
+	<th>소득세</th>
+	<td class="number">1,990원</td>
+	<td class="number">23,880원</td>
+</tr>
+<tr>
+	<th>지방소득세</th>
+	<td class="number">190원</td>
+	<td class="number">2,280원</td>
+</tr>
+<tr>
+	<th>총합계</th>
+	<td class="number">2,180원</td>
+	<td class="number">26,160원</td>
+</tr>
+</table>
+</div>
+
+<br>
+<div align="right">
+	<span style="cursor:hand" onclick="PRINT()">[인쇄]</span>
+	<span style="cursor:hand" onclick="calform.submit();">[변경하기]</span>
+	<a href="/s_cc/s3.jsp">[새로하기]</a>
+
+<form name="calform" method="POST" action="s3.jsp">
+<input type="hidden" name="NowYear" value="2013">
+<input type="hidden" name="calWorkYear" value="12">
+<input type="hidden" name="calWife" value="0">
+<input type="hidden" name="calYoung" value="0">
+<input type="hidden" name="calEtcFamily" value="0">
+<input type="hidden" name="calPay" value="1,200,000">
+<input type="hidden" name="calBigwaPay" value="">
+</form>
+<!-- 끝 -->
+            </td>
+            </tr>
+        </table>

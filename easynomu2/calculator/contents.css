@@ -1,0 +1,466 @@
+/* F12 개발자 도구로 작성. 원본 파일을 정확하게 표현한 것이 아닐 수도 있습니다. */
+.layoutBlock1 {
+	width: 870px; height: 310px; float: left; position: relative;
+}
+.layoutBlock2 {
+	width: 425px; height: 310px; margin-right: 20px; float: left; position: relative;
+}
+.layoutBlock3 {
+	width: 425px; height: 310px; float: left; position: relative;
+}
+.block1 {
+	width: 100%; height: 310px; float: left; display: block; position: relative;
+}
+.block1 .title {
+	width: 100%; height: 40px; float: left; display: block;
+}
+.block1 .title2 {
+	width: 100%; height: 60px; float: left; display: block;
+}
+.block1 .titleBlock {
+	background: url("./images/sub/titleBr.gif") no-repeat 0px 20%; color: rgb(51, 51, 51); line-height: 40px; padding-left: 30px; font-weight: bold;
+}
+.block1 .cont {
+	width: 100%; height: 300px; float: left; display: block;
+}
+.block1 .search {
+	width: 100%; height: 20px; text-align: right; margin-top: -30px; float: left; display: block;
+}
+.block1 .search input {
+	border: 1px solid rgb(145, 145, 145); height: 18px; line-height: 18px;
+}
+.block1 .search img {
+	border: currentColor; height: 18px; line-height: 18px; margin-right: 10px;
+}
+.block1 .search2 {
+	width: 100%; height: 65px; text-align: right; margin-top: -30px; float: left; display: block;
+}
+.block1 .search2 input {
+	border: 1px solid rgb(145, 145, 145); height: 18px; line-height: 18px;
+}
+.block1 .search2 img {
+	border: currentColor; line-height: 18px;
+}
+.block1 .search2 .btn {
+	float: none; position: relative;
+}
+.duruSearch {
+	width: 100%; height: 23px; text-align: right; line-height: 23px; margin-bottom: 10px; float: left;
+}
+.fd1 {
+	border: 1px solid rgb(217, 217, 217); height: 21px;
+}
+.fd1_size {
+	width: 100% !important;
+}
+.radio {
+	border: 0px currentColor !important; width: 14px !important; height: 18px; line-height: 18px;
+}
+.txtArea_size {
+	width: 100% !important; height: 150px; overflow: auto;
+}
+.duruGrid {
+	width: 100%; font-size: 12px; margin-bottom: 10px; border-top-color: rgb(255, 128, 0); border-bottom-color: rgb(159, 159, 159) !important; border-top-width: 2px; border-bottom-width: 1px !important; border-top-style: solid; border-bottom-style: solid !important; float: left; border-collapse: collapse;
+}
+.duruGrid tr th {
+	padding: 5px; text-align: center; font-family: "Nanum Gothic"; font-size: 12px; border-bottom-color: rgb(218, 218, 218); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.duruGrid tr td {
+	padding: 5px; text-align: center; font-family: "Nanum Gothic"; font-size: 12px; border-bottom-color: rgb(218, 218, 218); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.duruGrid tr th a {
+	color: rgb(102, 102, 102); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.duruGrid tr td a {
+	color: rgb(102, 102, 102); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.duruGrid tr th a:hover {
+	color: rgb(250, 146, 38); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.duruGrid tr td a:hover {
+	color: rgb(250, 146, 38); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.duruColor1 {
+	color: rgb(255, 138, 38) !important; font-weight: normal !important;
+}
+.duruColor2 {
+	color: rgb(51, 51, 51) !important; font-weight: normal !important;
+}
+.duruColor3 {
+	color: rgb(170, 170, 170) !important; font-weight: normal !important;
+}
+.viewCont {
+	background: rgb(241, 241, 241) !important; padding: 20px 0px !important;
+}
+.duruSize1 {
+	font-size: 15px !important;
+}
+.duruEng {
+	font-family: Verdana !important; font-size: 11px !important;
+}
+.duruLeft {
+	text-align: left !important;
+}
+.viewTitle {
+	width: 680px; height: 20px; line-height: 20px; float: left;
+}
+.viewName {
+	background: url("./images/iconPerson.gif") no-repeat 0px 50%; width: 75px; height: 20px; line-height: 20px; padding-left: 15px; float: left;
+}
+.viewDate {
+	width: 80px; height: 20px; text-align: center; line-height: 20px; float: left;
+}
+.viewListTitle {
+	width: 50px; height: 20px; line-height: 20px; float: left;
+}
+.viewListCont {
+	width: auto; height: 20px; line-height: 20px; float: left;
+}
+.durufile {
+	width: 100%; height: 20px; float: left;
+}
+.durufile li {
+	background: url("./images/iconFile.gif") no-repeat 0px 50%; width: auto; height: 20px; line-height: 20px; padding-left: 15px; margin-right: 10px; float: left; display: inline;
+}
+.durufile li a {
+	color: rgb(255, 138, 38) !important; text-decoration: none !important; -webkit-text-size-adjust: none;
+}
+.durufile li a:hover {
+	color: rgb(51, 51, 51) !important; text-decoration: underline !important; -webkit-text-size-adjust: none;
+}
+.duruPage {
+	width: 100%; height: 23px; text-align: center; color: rgb(51, 51, 51); line-height: 23px !important; font-family: Verdana; font-size: 11px; margin-bottom: 20px; float: left;
+}
+.duruPage a {
+	color: rgb(51, 51, 51); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.duruPage a:hover {
+	color: rgb(250, 146, 38); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.duruBtn {
+	padding: 20px 0px; width: 100%; height: 33px; text-align: center; border-top-color: rgb(218, 218, 218); border-top-width: 1px; border-top-style: solid; float: left; position: relative;
+}
+.duruBtn dl {
+	top: 20px; width: auto; height: 33px; right: 0px; display: block; position: absolute;
+}
+.duruBtn dl dd {
+	width: 95px; height: 33px; float: left;
+}
+.duruBtn2 {
+	left: 50% !important; margin-left: -95px !important;
+}
+.duruBdnone {
+	border: 0px currentColor !important;
+}
+.duruFQ {
+	width: 100%; height: auto; margin-bottom: 10px; border-top-color: rgb(255, 128, 0); border-bottom-color: rgb(159, 159, 159) !important; border-top-width: 2px; border-bottom-width: 1px !important; border-top-style: solid; border-bottom-style: solid !important; float: left;
+}
+.duruFQ::after {
+	clear: both; display: block; content: " ";
+}
+.duruFQ {
+	
+}
+.duruFQ .title a {
+	color: rgb(51, 51, 51); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.duruFQ .title a:hover {
+	color: rgb(51, 51, 51); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.duruFQ .title {
+	padding: 15px 0px; width: 100%; height: auto; color: rgb(51, 51, 51); font-family: "Nanum Gothic"; font-size: 13px; border-bottom-color: rgb(218, 218, 218); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+.duruFQ .title .iconF {
+	background: url("./images/iconF.gif") no-repeat 5px 0px; width: 95%; height: auto; padding-left: 32px; float: left; min-height: 20px;
+}
+.duruFQ .cont {
+	background: rgb(242, 242, 242); padding: 15px 0px; width: 100%; height: auto; border-bottom-color: rgb(218, 218, 218); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+.duruFQ .cont .iconQ {
+	background: url("./images/iconQ.gif") no-repeat 5px 0px; width: 95%; height: auto; padding-left: 32px; float: left; min-height: 20px;
+}
+.hand {
+	cursor: pointer;
+}
+.fixidTable {
+	border-width: 2px 1px 1px; border-style: solid; border-color: rgb(255, 128, 0) rgb(218, 218, 218) rgb(218, 218, 218); width: 100%; font-size: 12px; margin-bottom: 10px; border-collapse: collapse;
+}
+.fixidTable table {
+	width: 100%; border-collapse: collapse;
+}
+.fixidTable td {
+	border-right-color: rgb(218, 218, 218); border-right-width: 1px; border-right-style: solid;
+}
+.fixidTable th {
+	border-right-color: rgb(218, 218, 218); border-right-width: 1px; border-right-style: solid;
+}
+.content thead td {
+	background-color: rgb(255, 240, 224);
+}
+.fixidTable thead th {
+	background-color: rgb(255, 240, 224);
+}
+.content tbody tr:hover {
+	background-color: rgb(238, 238, 238);
+}
+.over {
+	background-color: rgb(238, 238, 238);
+}
+.over td {
+	color: rgb(250, 146, 38) !important;
+}
+.fixidTable .foot td {
+	border-top-color: rgb(218, 218, 218); border-top-width: 1px; border-top-style: solid;
+}
+.fixidTable .foot th {
+	border-top-color: rgb(218, 218, 218); border-top-width: 1px; border-top-style: solid;
+}
+.noBorderRight {
+	border-right-color: currentColor !important; border-right-width: medium !important; border-right-style: none !important;
+}
+.noBorderBottom {
+	border-bottom-color: currentColor !important; border-bottom-width: medium !important; border-bottom-style: none !important;
+}
+.fixidTable tr th {
+	padding: 4px 1px; text-align: center; font-family: "Nanum Gothic"; font-size: 12px; border-bottom-color: rgb(218, 218, 218); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.fixidTable tr td {
+	padding: 4px 1px; text-align: center; font-family: "Nanum Gothic"; font-size: 12px; border-bottom-color: rgb(218, 218, 218); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.fixidTable .head td {
+	background-color: rgb(255, 240, 224);
+}
+.fixidTable .head th {
+	background-color: rgb(255, 240, 224);
+}
+.fixidTable .foot td {
+	background-color: rgb(244, 244, 244);
+}
+.fixidTable .foot th {
+	background-color: rgb(244, 244, 244);
+}
+.fixidTable tr th a {
+	color: rgb(102, 102, 102); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.fixidTable tr td a {
+	color: rgb(102, 102, 102); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.fixidTable tr th a:hover {
+	color: rgb(250, 146, 38); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.fixidTable tr td a:hover {
+	color: rgb(250, 146, 38); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.fixidTable .head table thead tr th.sort {
+	background-position: right; text-align: left; cursor: pointer; background-image: url("./images/sub/bg.gif"); background-repeat: no-repeat;
+}
+.fixidTable .head table thead tr th.asc {
+	background-image: url("./images/sub/asc.gif");
+}
+.fixidTable .head table thead tr th.desc {
+	background-image: url("./images/sub/desc.gif");
+}
+.fixidTable .content {
+	position: relative; -ms-overflow-x: hidden; -ms-overflow-y: auto;
+}
+.alLeft {
+	text-align: left !important;
+}
+.alRight {
+	text-align: right !important;
+}
+#widelyCompanyDiv {
+	width: 870px; height: 260px; position: relative;
+}
+#widelyPlanEmpDiv {
+	width: 425px; height: 255px; position: relative;
+}
+#widelyTotalEmpDiv {
+	width: 425px; height: 255px; position: relative;
+}
+.comSerachInfo {
+	margin: 0px auto; width: 870px; height: 100px;
+}
+.comSerachInfo .title {
+	width: 100%; height: 40px; float: left; display: block;
+}
+.comSerachInfo .titleBlock {
+	background: url("./images/titleBr.gif") no-repeat 0px 20%; color: rgb(51, 51, 51); line-height: 40px; padding-left: 30px; font-weight: bold;
+}
+.comSerachInfo table {
+	border-width: 2px 1px 1px; border-style: solid; border-color: rgb(255, 128, 0) rgb(218, 218, 218) rgb(218, 218, 218); width: 100%; font-size: 12px; margin-bottom: 10px; border-collapse: collapse;
+}
+.comSerachInfo tr th {
+	padding: 5px; text-align: center; font-family: "Nanum Gothic"; font-size: 12px; border-bottom-color: rgb(218, 218, 218); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.comSerachInfo tr td {
+	padding: 5px; text-align: center; font-family: "Nanum Gothic"; font-size: 12px; border-bottom-color: rgb(218, 218, 218); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.comSerachInfo th {
+	background-color: rgb(255, 240, 224);
+}
+table tr th p {
+	overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.NewTab {
+	margin: 30px 0px 40px; width: 100%; height: 35px; float: left;
+}
+.NewTab li {
+	float: left; display: inline;
+}
+.NoticeBlock {
+	background: url("./images/noticeImg.gif") no-repeat 0px 50%; padding: 20px 0px 20px 165px; width: 705px; height: auto; color: rgb(51, 51, 51); font-family: "Nanum Gothic"; margin-bottom: 20px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted; position: relative;
+}
+.NoticeBlock::after {
+	clear: both; display: block; content: " ";
+}
+.NoticeBlock {
+	
+}
+.NoticeBlock dl {
+	width: 705px; height: auto; position: relative;
+}
+.NoticeBlock dl::after {
+	clear: both; display: block; content: " ";
+}
+.NoticeBlock dl {
+	
+}
+.NoticeBlock dt {
+	width: 705px; height: auto; line-height: 20px; font-size: 13px; float: left;
+}
+.NoticeBlock dd {
+	width: 705px; height: auto; float: left; position: relative;
+}
+.NoticeBlock dd ul {
+	position: relative;
+}
+.NoticeBlock dd li {
+	background: url("./images/noticeBr.gif") no-repeat 0px 50%; width: 690px; color: rgb(102, 102, 102); line-height: 20px; padding-left: 15px; font-size: 11px; float: left; display: inline;
+}
+.NoticeBlock dd li img {
+	padding-top: 3px;
+}
+.NoticeBlock .iconO1 {
+	background: url("./images/iconO1.png") no-repeat 0px 50%; width: 690px; padding-left: 15px;
+}
+.NoticeBlock .iconO2 {
+	background: url("./images/iconO2.png") no-repeat 0px 50%; width: 690px; padding-left: 15px;
+}
+.NoticeBlock .iconX {
+	background: url("./images/iconX.png") no-repeat 0px 50%; width: 690px; padding-left: 15px;
+}
+.NoticeBlock dd .noticeView {
+	padding: 0px !important; border: 3px solid rgb(255, 102, 0); left: 250px; top: 20px; width: 410px; height: 61px; display: none; position: absolute; z-index: 999;
+}
+.noticeView table {
+	width: 100%; font-size: 12px; margin-bottom: 10px; float: left; border-collapse: collapse; background-color: rgb(255, 255, 255);
+}
+.noticeView table tr th {
+	padding: 5px; text-align: center; font-family: "Nanum Gothic"; font-size: 12px; border-bottom-color: rgb(255, 102, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.noticeView tr td {
+	padding: 5px; text-align: center; font-family: "Nanum Gothic"; font-size: 12px; border-bottom-color: rgb(255, 102, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.noticeView table a {
+	color: rgb(102, 102, 102); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.noticeView table tr td a {
+	color: rgb(102, 102, 102); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.noticeView table a:hover {
+	color: rgb(250, 146, 38); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.noticeView table tr td a:hover {
+	color: rgb(250, 146, 38); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.bdNone {
+	border: 0px currentColor !important;
+}
+.noticeView p {
+	top: -6px; width: 20px; height: 20px; right: -23px; display: block; position: absolute;
+}
+.tipBlock {
+	margin: 0px; width: 870px; height: auto; color: rgb(255, 128, 0); line-height: 18px; font-family: "Nanum Gothic"; float: left;
+}
+.resultBlock {
+	margin: 0px 0px 10px; width: 870px; height: auto; line-height: 18px; font-family: "Nanum Gothic"; font-size: 11px; float: left;
+}
+.resultBlock dl {
+	width: 870px; height: auto;
+}
+.resultBlock dt {
+	background: url("./images/noticeBr.gif") no-repeat 0px 50%; padding: 0px 8px 0px 15px; width: auto; height: auto; float: left;
+}
+.resultBlock dd {
+	padding: 0px 15px 0px 5px; width: auto; height: auto; color: rgb(255, 128, 0) !important; font-family: Verdana !important; float: left;
+}
+#ccWrap {
+	width: 850px; height: background-color: rgb(255, 255, 255);
+}
+#ccWrap h1 {
+	width: 850px; height: auto; float: left; display: block;
+}
+#ccWrap .conBlock {
+	padding: 0px 0px 0px 20px; width: 830px; height: 210px; display: block;
+}
+#ccWrap .conBlock dt {
+	padding: 20px 0px; width: 810px; height: 35px;
+}
+#ccWrap .conBlock dd {
+	width: 270px; height: 44px; line-height: 44px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+#ccWrap .conBlock dd label {
+	background: url("./images/br1.gif") no-repeat 3px 50%; width: 65px; height: 44px; line-height: 44px; padding-left: 20px; float: left;
+}
+#ccWrap .conBlock dd input {
+	text-align: right; margin-top: 10px; _margin-top: 8px;
+}
+#ccWrap .btnset1 {
+	width: 176px; height: 60px; padding-top: 30px; padding-left: 320px;
+}
+#ccWrap .btnset2 {
+	height: 60px; padding-top: 10px; padding-left: 400px; float: left;
+}
+#ccWrap .closeBtn {
+	top: 0px; width: 40px; height: 40px; right: 0px; position: absolute;
+}
+.ccGrid {
+	border: 1px solid rgb(194, 157, 124); width: 810px; margin-top: 10px; margin-bottom: 10px; margin-left: 20px; float: left; border-collapse: collapse;
+}
+.ccGrid tr th {
+	background: rgb(254, 194, 140); padding: 3px; border: 1px solid rgb(194, 157, 124); text-align: center; color: rgb(142, 70, 6); font-family: "Nanum Gothic"; font-size: 12px;
+}
+.ccGrid tr td {
+	padding: 3px; border: 1px solid rgb(194, 157, 124); text-align: right; font-family: Verdana; font-size: 11px;
+}
+.ccGrid tr th a {
+	color: rgb(102, 102, 102); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.ccGrid tr td a {
+	color: rgb(102, 102, 102); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.ccGrid tr th a:hover {
+	color: rgb(250, 146, 38); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.ccGrid tr td a:hover {
+	color: rgb(250, 146, 38); text-decoration: none; -webkit-text-size-adjust: none;
+}
+.ccGrid .resultTxt {
+	text-align: center !important; color: rgb(142, 70, 6) !important; font-family: "Nanum Gothic" !important; font-size: 12px !important;
+}
+.ccGrid .center {
+	text-align: center !important;
+}
+.PopInput {
+	border: 1px solid rgb(172, 172, 172); height: 23px; line-height: 23px;
+}
+.PopInputColor {
+	border-color: rgb(255, 139, 1);
+}
+.LayTitleBlock {
+	background: url("./images/titleBr.gif") no-repeat 0px 20%; color: rgb(51, 51, 51); line-height: 40px; padding-left: 30px; font-weight: bold;
+}
+.searchTitleBlock {
+	color: rgb(51, 51, 51); line-height: 40px; padding-right: 7px !important; font-weight: bold;
+}

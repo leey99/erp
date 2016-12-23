@@ -1,0 +1,53 @@
+<?
+$sub_menu = "500100";
+include_once("./_common.php");
+
+$sub_title = "정부지원금 계산기";
+$g4[title] = $sub_title." : 노무관리 : 이지노무";
+
+$colspan = 11;
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title><?=$g4[title]?></title>
+<link href="css/popup.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td><img src="./images/title2.gif" width="218" height="40" border="0"></td>
+									<td align="right">
+										<img src="./images/category_br.jpg" width="13" height="3" border="0" align="absmiddle"><a href="/" class="bmain">홈</a> <span class="bmain">&gt;</span> <a href="/s_cc/s1.jsp" class="bmain">산출계산기</a> <span class="bmain">&gt;</span>
+										<span class="cld_redtext"><strong>연차계산기</strong></span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div style="padding:10px;border:1px solid gray;">
+								<div><b>⊙ 안내사항</b></div>
+								° 전년도 근무로 인하여 발생되는 연차휴가를 계산할 수 있습니다. <br>
+								° 근무제, 근속년수, 전년도 근무 상태를 선택합니다.<br>
+								° 근속년수 1년 미만 근로자의 경우 연차휴가는 별도 계산하셔야 합니다. (1개월 만근하면 연차휴가 1개 발생) <br>
+								<font color="blue">
+								° 연차수당 지급에 사용되는 연차정보는 전전년도의 근무로 지급된 연차휴가 중 전년도에 사용하고 남은 잔여연차에 대하여<br>
+								&nbsp;&nbsp;당년도에 연차수당이 발생합니다.
+								</font>
+							</div>
+							<br>
+							<!-- <a href="#"><img src="/images/s_cc/btn_cc.gif" width="110" height="32" border="0"></a> -->
+							<IFRAME ID="fraYearBonus" frameborder="0" WIDTH="100%" HEIGHT="410" SRC="yearbonus.html" scrolling="no">	</IFRAME>
+							<br><br><br><br><br>
+            </td>
+          </tr>
+        </table>
+</body>
+</html>

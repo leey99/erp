@@ -1,0 +1,171 @@
+/* css005 */
+.makePersonalInfoPolicy0 { min-height:400px; height:auto; height:400px; background:url(/images/005/bg_article005002.jpg) no-repeat 0 0}
+.makePersonalInfoPolicy0 .copy { height:85px; margin:0 0 133px; padding:74px 0 0 362px}
+.makePersonalInfoPolicy0 h4 { height:25px}
+.makePersonalInfoPolicy0 .handle { height:55px; padding:20px 0 0 105px; font-weight:bold; font-size:1.063em; color:#4b6ba4}
+.makePersonalInfoPolicy0 .handle label { float:left; margin-top:6px; padding:0 20px 0 9px; background:url(/images/common/blt_006.gif) no-repeat 0 50%}
+.makePersonalInfoPolicy0 .handle input { float:left}
+.makePersonalInfoPolicy0 .handle input.input_text { width:270px; height:23px; margin-right:10px; padding:0 5px; line-height:23px; border:4px solid #2f64c2}
+/* makePersonalInfoPolicy */
+#wrapper #container #rightSection #content .makePersonalInfoPolicy h4 { height:29px; margin:0 0 30px; padding:8px 0 0 15px; font-size:16px; color:#fff; line-height:1.2; background:url(/images/005/bg_heading.gif) no-repeat 0 0}
+.makePersonalInfoPolicy h5,
+.makePersonalInfoPolicy .descript{margin:0 0 8px; padding:0 0 5px 22px; font-weight:bold; font-size:13px; color:#3762A4; line-height:17px; background:url(/images/common/blt_h4.gif) no-repeat 0 0}
+.makePersonalInfoPolicy .listContainBox { padding:14px 0 14px 105px; border:4px solid #d3dfec; background:#f4f5f8}
+.makePersonalInfoPolicy .listContainBox ul { overflow:hidden; width:100%; list-style:none}
+.makePersonalInfoPolicy .listContainBox li { float:left; width:170px; padding:0 7px 0 0}
+.makePersonalInfoPolicy .listContainBox li label { font-weight:bold; vertical-align:middle}
+.makePersonalInfoPolicy .listContainBox li input.radio { width:13px; height:13px; margin-right:3px; vertical-align:middle}
+.makePersonalInfoPolicy .label { margin:0 5px 0 0}
+.in_search { position:relative; width:90%; height:17px; margin:0 auto; text-align:left; border:1px solid #d3dfec}
+.in_search input { width:80%; height:17px; padding:0; line-height:17px; border:0 none; background:transparent}
+.in_search a { display:block; position:absolute; top:1px; right:0; z-index:10; overflow:hidden; width:20px; height:17px}
+.no_anchor input { width:98%}
+.makePersonalInfoPolicy .textareaBox { width:100%}
+.makePersonalInfoPolicy .textareaBox textarea { overflow-x:hidden; overflow-y:auto; width:690px; height:185px; padding:15px; border:1px solid #d3dfec}
+.makePersonalInfoPolicy .listTable li,
+.makePersonalInfoPolicy .listTable2 li{line-height:1.7; vertical-align:top; list-style:none}
+.makePersonalInfoPolicy .listTable li label,
+.makePersonalInfoPolicy .listTable2 li label{vertical-align:middle}
+.makePersonalInfoPolicy .listTable .inputTxt,
+.makePersonalInfoPolicy .listTable2 .inputTxt{height:18px; padding-top:0; padding-bottom:0; line-height:18px; border:1px solid #d3dfec}
+/* listTable */
+.tableWrapper .listTable2 { border-top:0 none}
+.tableWrapper .listTable2 thead th.stit { padding: 5px 15px 4px; font-weight:bold; color:#ffffff; text-align:center; line-height:18px; background:#6f8bb9}
+.tableWrapper { overflow:hidden; width:100%}
+.tableWrapper .section_l { float:left; width:50%}
+.tableWrapper .section_l .listTable2 thead th.stit { background:url(/images/005/line_tablewrapper_th.gif) repeat-y 100% 0 #6f8bb9}
+.tableWrapper .section_r { float:left; width:50%}
+.tableWrapper .inputTxt { width:90%; height:17px; padding-top:0; padding-bottom:0; line-height:17px; border:1px solid #d3dfec}
+.makePersonalInfoPolicy .confirmPolicyContent { overflow-x:hidden; overflow-y:auto; height:215px; padding:15px; border:1px solid #d3dfec; border-width:1px 0}
+/* 005 popup */
+em.emphasis { font-style:normal; font-weight:bold; color:#3762a4}
+.chooseList { overflow:hidden; width:100%}
+.chooseList li { float:left; width:25%; padding:2px 0; vertical-align:top}
+.chooseList li .checkobj { width:13px; height:13px}
+.personalPolicyArticle { padding:10px 0 6px; border:1px solid #d3dfec; background:#f4f5f8; *zoom:1}
+.personalPolicyArticle:after { display:block; clear:both; content:" "}
+.personalPolicyArticle h2,
+.personalPolicyArticle li { margin:0 0 3px; padding:0 5px 0 19px; font-size:12px; line-height:1.7; vertical-align:top; background:url(/images/common/blt_006.gif) no-repeat 11px 8px; list-style:none}
+.personalPolicyArticle p { margin:0 0 3px; padding:0 5px 0 19px; font-size:12px; line-height:1.7; vertical-align:top}
+.personalPolicyArticle ul { padding:4px 0}
+.personalPolicyArticle li li { margin:0; padding:0; background:none}
+.personalPolicyArticle .section { float:left; width:42%}
+.personalPolicyArticle .section2 { float:left; width:50%}
+.personalPolicyArticle .section li,
+.personalPolicyArticle .section2 li{background:none}
+.pop .listTable li label,
+.pop .listTable2 li label{vertical-align:middle}
+.pop .listTable .inputTxt,
+.pop .listTable2 .inputTxt{height:18px; padding-top:0; padding-bottom:0; line-height:18px; border:1px solid #d3dfec}
+#popWrap2 .tit { margin:0 0 10px; font-size:12px; font-weight:bold; color:#3762a4}
+.notes { line-height:1.8}
+.notes li { list-style:none}
+
+/* tecCheck */
+.tecCheck p.emphasis { padding:20px 0 30px 17px;  font-weight:bold; color:#333}
+.tecCheck ul.service li { margin:0 0 20px; padding:0 0 0 8px; background:url(/images/common/blt_006.gif) no-repeat 0 8px}
+.tecCheck ul.service strong { display:block; margin:0 0 7px; color:#4b6ba4}
+.tecCheck ul.definition { list-style:none}
+.tecCheck ul.definition li { margin:0 0 10px; padding:0 0 0 18px; background:url(/images/common/blt_006.gif) no-repeat 5px 8px; zoom:1}
+.tecCheck ul.definition li:after { display:block; clear:both; content:""}
+.tecCheck ul.definition li strong { float:left; width:80px; color:#4b6ba4}
+
+/* midsizeBusiness */
+.midsizeBusiness p.emphasis { padding:20px 0 30px 17px;  font-weight:bold; color:#333}
+.midsizeBusiness ul.service { padding:0 0 0 230px; list-style:none; background:url(/images/005/bg_005004001_midsizebusiness.jpg) no-repeat 0 0}
+.midsizeBusiness ul.service li { margin:0 0 20px; padding:0 0 0 8px; background:url(/images/common/blt_006.gif) no-repeat 0 8px}
+.midsizeBusiness ul.service strong { display:block; margin:0 0 7px; color:#4b6ba4}
+.midsizeBusiness ul.definition { list-style:none}
+.midsizeBusiness ul.definition li { margin:0 0 10px; padding:0 0 0 18px; background:url(/images/common/blt_006.gif) no-repeat 5px 8px; zoom:1}
+.midsizeBusiness ul.definition li:after { display:block; clear:both; content:""}
+.midsizeBusiness ul.definition li strong { float:left; width:180px; color:#4b6ba4}
+.weakWebCheck ul.service { margin:0 0 40px; list-style:none; border-top:1px solid #adc2da}
+.weakWebCheck ul.service li { position:relative; vertical-align:top; border:1px solid #adc2da; border-top:0 none; zoom:1}
+.weakWebCheck ul.service li.even { background:url(/images/005/bg_weakwebcheck_list.gif) repeat-x 0 0 #ecf5ff}
+.weakWebCheck ul.service li .cont1 { padding:27px 10px 27px 100px}
+.weakWebCheck ul.service li .cont2 { padding:17px 10px 17px 100px}
+.weakWebCheck ul.service li .cont3 { padding:7px 10px 7px 100px}
+.weakWebCheck ul.service li .guide { position:relative; width:100%}
+.weakWebCheck ul.service li .guide span { display:block; position:absolute; z-index:10; width:9px; height:8px; font-size:0; line-height:0; background:url(/images/005/bg_round_edge.gif) no-repeat}
+.weakWebCheck ul.service li .guide span.tl { top:0; left:-1px; background-position:0 -1px}
+.weakWebCheck ul.service li .guide span.tr { top:0; left:-8px; margin-left:100%; background-position:-9px -1px}
+.weakWebCheck ul.service li .guide span.bl { top:-7px; left:-1px; background-position:0 -10px}
+.weakWebCheck ul.service li .guide span.br { top:-7px; left:-8px; margin-left:100%; margin-left:100%; background-position:-9px -10px}
+.weakWebCheck ul.service li.firstchild .guide span.tl { top:-1px; left:-1px; background-position:0 0}
+.weakWebCheck ul.service li.firstchild .guide span.tr { top:-1px; left:-8px; margin-left:100%; background-position:-9px 0}
+.weakWebCheck ul.service li.even .guide span.tl { top:0; left:-1px; background-position:0 -19px}
+.weakWebCheck ul.service li.even .guide span.tr { top:0; left:-8px; margin-left:100%; background-position:-9px -19px}
+.weakWebCheck ul.service li.even .guide span.bl { top:-7px; left:-1px; background-position:0 -28px}
+.weakWebCheck ul.service li.even .guide span.br { top:-7px; left:-8px; margin-left:100%; margin-left:100%; background-position:-9px -28px}
+.weakWebCheck ul.service span.listNum { display:block; position:absolute; top:9px; left:20px; width:50px; height:55px; text-indent:-9999em; background-image:url(/images/005/bg_listnum_005004002.jpg); background-repeat:no-repeat}
+.weakWebCheck ul.service span.n01 { background-position:0 0}
+.weakWebCheck ul.service span.n02 { background-position:0 -55px}
+.weakWebCheck ul.service span.n03 { background-position:0 -110px}
+.weakWebCheck ul.service span.n04 { background-position:0 -165px}
+.weakWebCheck ul.service span.n05 { background-position:0 -220px}
+.weakWebCheck ul.service span.n06 { background-position:0 -275px}
+.weakWebCheck ul.service span.n07 { background-position:0 -330px}
+.weakWebCheck ul.service span.n08 { background-position:0 -385px}
+.weakWebCheck ul.service span.n09 { background-position:0 -440px}
+.weakWebCheck ul.service span.n10 { background-position:0 -495px}
+.weakWebCheck ul.service span.n11 { background-position:0 -550px}
+.weakWebCheck ul.service span.n12 { background-position:0 -605px}
+.weakWebCheck ul.service span.n13 { background-position:0 -660px}
+.weakWebCheck ul.service span.n14 { background-position:0 -715px}
+.weakWebCheck ul.service span.n15 { background-position:0 -770px}
+.weakWebCheck ul.service span.n16 { background-position:0 -825px}
+.weakWebCheck ul.service span.n17 { background-position:0 -880px}
+.weakWebCheck ul.service span.n18 { background-position:0 -935px}
+.weakWebCheck ul.service span.n19 { background-position:0 -990px}
+.weakWebCheck ul.service span.n20 { background-position:0 -1045px}
+
+/* add | 2011-12-12 | in_search2 */
+.in_search2 { position:relative; width:330px; height:17px; text-align:left; border:1px solid #d3dfec}
+.in_search2 input { width:80%; height:17px; padding:0; line-height:17px; border:0 none; background:transparent}
+.in_search2 a { display:block; position:absolute; top:1px; right:0; z-index:10; overflow:hidden; width:20px; height:17px}
+
+/* self_Check | A3 cgm */
+.self_Check{width:100%}
+.self_Check .article{padding:0 0 35px 155px;background:url(/images/005/bg_selfcheck.jpg) no-repeat 0 0}
+.self_Check .article p{font-weight:bold;color:#333}
+.self_Check .article dt{padding:20px 0 0;font-weight:bold;color:#4b6ba4}
+
+.selfCheck_Step{width:100%;margin:0 0 30px}
+.selfCheck_Step ol{overflow:hidden;width:100%;height:46px;background:url(/images/005/lst_selfcheck.jpg) no-repeat}
+.selfCheck_Step ol.step1{background-position:0 0}
+.selfCheck_Step ol.step2{background-position:0 -49px}
+.selfCheck_Step ol.step3{background-position:0 -98px}
+.selfCheck_Step li{float:left;width:239px;height:31px;padding:14px 0 0;text-align:center;vertical-align:top;list-style:none}
+
+/* 2011-12-23 | makePolicy_Step | A3 cgm */
+.makePolicy_Step{overflow:hidden;width:100%;margin:0 0 25px}
+.makePolicy_Step li{float:left;width:112px;height:111px;padding:0 67px 0 0;background:url(/images/005/img_makepolicy_step.jpg) no-repeat 0 0;text-indent:-9999em;list-style:none}
+.makePolicy_Step li.mp_Step1{background-position:0 0}
+.makePolicy_Step li.mp_Step2{background-position:-179px 0}
+.makePolicy_Step li.mp_Step3{background-position:-358px 0}
+.makePolicy_Step li.mp_Step4{padding:0;background-position:-536px 0}
+.makePolicy_Step.stepOn1 li.mp_Step1{background-position:0 -119px}
+.makePolicy_Step.stepOn2 li.mp_Step2{background-position:-179px -119px}
+.makePolicy_Step.stepOn3 li.mp_Step3{background-position:-358px -119px}
+.makePolicy_Step.stepOn4 li.mp_Step4{width:110px;background-position:-536px -119px}
+.makePolicy_Step li .numData{display:block;padding:62px 0 0;font-weight:normal;font-size:11px;font-family:verdana;line-height:1.2;text-align:center;text-indent:0}
+
+/* techSupport */
+.techSupport ul, .techSupport dl, .techSupport li{list-style:none}
+.techSupp_guide{padding:12px 18px 21px;font-weight:bold}
+.techSupp_notice{padding:0 0 0 15px}
+#wrapper #container #rightSection #content .techSupport h4{margin:0 0 10px;padding-left:15px;background:url(/images/three/title_bullet.gif) no-repeat 0 0;font-weight:bold;font-family:dotum;font-size:14px;line-height:1.4;color:#2071bd;letter-spacing:-1px;text-align:left}
+.techSupp_h{padding:1px 0 5px 22px;background:url(/images/common/blt_h4.gif) 0 0 no-repeat;font-weight:bold;font-size:13px;color:#3762a4}
+.techSupp_stitle{margin:15px 0 5px;padding:0 0 0 8px;background:url(/images/common/blt_006.gif) 0 7px no-repeat;font-size:12px}
+.techSupp_section{display:inline-block;position:relative;min-height:95px;height:auto !important;height:95px;margin:0 0 30px;padding:0 0 0 168px}
+.techSupp_bg{position:absolute;left:0;width:130px;background:url(/images/005/bg_techsupport.jpg) no-repeat 0 0}
+.techSupp1 .techSupp_bg{top:0;height:105px;background-position:25px 0}
+.techSupp2 .techSupp_bg{top:4px;height:126px;background-position:-167px 0}
+.techSupp4 .techSupp_bg{top:9px;height:100px;background-position:-353px 0}
+.techSupp5 .techSupp_bg{top:5px;height:100px;background-position:-530px 0}
+.techSupp2 ul ul{margin:0 0 20px;padding:0 0 0 16px}
+.techSupp3{display:block;position:relative;min-height:46px;height:auto !important;height:46px;margin:0 0 35px;padding:0 0 0 154px;background:url(/images/005/techsupport_lst.jpg) no-repeat 0 13px}
+.techSupp3 ol{text-indent:-9999em}
+.techSupp4 ul{padding:17px 0 0 10px}
+.techSupp4 li{padding:0 0 0 8px;background:url(/images/common/blt_013.gif) no-repeat 0 9px}
+.textIndent{display:inline-block;width:16px}

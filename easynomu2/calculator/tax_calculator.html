@@ -1,0 +1,147 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+		<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td><img width="218" height="40" src="./images/title3.gif" border="0"></td>
+				<td align="right">
+					<img width="13" height="3" align="absmiddle" src="./images/category_br.jpg" border="0"><a class="bmain" href="/">홈</a> <span class="bmain">&gt;</span> <a class="bmain" href="/s_cc/s1.jsp">산출계산기</a> <span class="bmain">&gt;</span>
+					<span class="cld_redtext"><strong>세금계산기</strong></span></td>
+			</tr>
+		</tbody></table></td>
+		</tr>
+	<tr>
+		<td height="20">
+<!-- 시작 -->
+<style>
+	.calculation {border-spacing:0px;padding:0px;border-collapse:collapse;font-size:9pt;}
+	.calculation td, .calculation input, .calculation select{font-family:'돋움';padding:5px; border:1px solid gray;word-break: break-all;table-layout: fixed}
+	.calculation th{font-family:'돋움';padding:5px; border:1px solid gray; background-color:#F3F3F3}
+	.calculationtitle {font-family:'돋움';padding:5px;font-weight:bold;color:#9900CC;}
+	.nimitext {font-family:'돋움';color:#9900CC;font-size:8pt;}
+	.calculation .bordernone{border:none;}
+	#NoticeLay {border:3px solid #0099FF;background-color:white;padding:5px;}
+</style>
+<div style="padding: 10px; border: 1px solid gray;">
+	<div><b>⊙ 안내사항</b></div>
+	° 2009.2월 이후 지급하는 근로소득분에 대한 소득세를 계산할 수 있습니다. <br>
+	° 월급여액과 공제대상 가족수를 선택 후 [계산하기]를 누릅니다. <br>
+	° 월급여액은 비과세를 제외한 금액입니다. <br>
+	° 20세 이하 자녀수와 기타공제대상 가족의 수(부 60세, 모 55세, 형제자매 20세 이하)를 기재합니다. <br>
+	° 20세 이하의 자녀이더라도 연간 소득금액이 100만원을 초과하는 경우에는<br>
+	&nbsp;&nbsp;20세 이하의 자녀수 기재 시 제외하여 기재하여야 합니다. <br>
+</div>
+<br>
+<div id="NoticeLay" style="display: none; position: absolute;"></div>
+<form name="calform" onsubmit="return false" action="tax_result.html" method="POST">
+<input name="NowYear" type="hidden" value="2013">
+<table width="100%" class="calculation">
+<colgroup><col width="100"><col width="200" align="right"><col width="100"><col width="*">
+<tbody><tr>
+	<th> 2013년 근속월수</th>
+	<td>
+		<select name="calWorkYear">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12" selected="">12</option>
+		</select>
+		개월
+	</td>
+	<th rowspan="2"> * 공제대상<br><br>가족수</th>
+	<td rowspan="2">
+		<div>본인 : 1 인 </div>
+		<div>
+			배우자 :
+			<input name="calWife" class="bordernone" id="calWifeY" onclick="calform.calWife[1].checked=false" type="checkbox" value="1">
+			<label for="calWifeY">있음</label>
+			<input name="calWife" class="bordernone" id="calWifeN" onclick="calform.calWife[0].checked=false" type="checkbox" checked="" value="0">
+			<label for="calWifeN">없음</label>
+		</div>
+		<div>
+			20세 이하 자녀수 :
+			<select name="calYoung">
+				<option value="0" selected="">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+			</select>명
+		</div>
+		<div>
+			기타공제대상가족수 :
+			<select name="calEtcFamily">
+				<option value="0" selected="">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+			</select>명
+		</div>
+	</td>
+</tr>
+<tr>
+	<th> 월급여액</th>
+	<td>
+		<input name="calPay" style="text-align: right;" onkeyup="KeyUPCalPay(this,'NoticeLay');KeyControls('calWorkYear','calBigwaPay','calBigwaPay')" type="text" size="11" maxlength="11" value=""> 원<br>
+	</td>
+</tr>
+</tbody></table>
+<script language="javascript" src="tax_calculator.js"></script>
+<script language="javascript">
+	function OnSubmit() {
+		if(calform.calPay.value.length<1) {
+			alert('월급여액을 입력하세요');
+			calform.calPay.focus();
+		}
+		else if((calform.calPay.value.replaceAll(",","")*1)<800000) {
+			alert('80만원 미만은 입력할 수 없습니다.');
+			calform.calPay.focus();
+		}
+		else if(!calform.calWife[0].checked && !calform.calWife[1].checked) {
+			alert('배우자 여부를 선택하세요');
+			calform.calWife[0].focus();
+		}
+		else calform.submit();
+	}
+</script>
+<!-- 종료 -->
+            </form>
+						</td>
+          </tr>
+          <tr>
+            <td align="center" class="10padding">
+            	<img width="110" height="32" style="border: currentColor; cursor: hand;" onclick="OnSubmit()" src="./images/btn_cc.gif" border="0">
+            </td>
+          </tr>
+        </tbody>
+			</table>

@@ -1,0 +1,44 @@
+/* tablist - 004001001 */
+.tablist { overflow:hidden; width:100%; margin:0 0 20px}
+.tablist li { float:left; width:143px; margin:0 1px 0 0; list-style:none}
+.tablist li a { display:block; height:26px; padding:12px 0 0; font-weight:bold; text-align:center; line-height:1.2; background:url(/images/004/bg_tablist.gif) no-repeat 0 0}
+.tablist li.on a,
+.tablist li a:hover,
+.tablist li a:active,
+.tablist li a:focus{color:#fff; background-position:100% 100%}
+/* Blind Text */
+.blind { overflow:hidden; position:absolute; top:-1000%; left:-1000%; width:1px; height:1px; font-size:0; line-height:0}
+/* listTable */
+body .listTableBg thead th {background:url(/images/004/bg_listtable_th.gif) repeat-x 0 0 #f8f9fc}
+.listTable #listView,
+.listTable2 #listView{padding:20px 10px 25px}
+body .listTable3 tbody th {background:#f4f5f8}
+body .listTableNavi tbody th { width:50px; padding-left:27px}
+body .listTableNavi tbody th.prev { background:url(/images/004/bu_listnavi_prev.gif) no-repeat 10px 50% #f4f5f8}
+body .listTableNavi tbody th.next { background:url(/images/004/bu_listnavi_next.gif) no-repeat 10px 50% #f4f5f8}
+/* term search */
+.sch_dt_wrap {position:relative}
+#sch_dt{ display:none; position:absolute; top:20px; left:0; margin-top:-1px; width:230px; z-index:9999; background-color:#fff}
+#sch_dt ul { position:absolute; top:0; left:0; z-index:10; width:230px; border:1px solid #cdd5e6; background:#fff}
+#sch_dt li { float:none !important ;padding:2px 5px; color:#5f7aa4; text-align:left !important; list-style:none}
+#sch_dt input{width:70px}
+#searchDt{background:url(/images/004/img_sel_allow.gif) no-repeat 100% 0}
+#sch_dt .hands { cursor:pointer}
+.searchWrap .sTopR input,
+.searchWrap .sTopR select,
+.searchWrap .sTopR .sch_dt_wrap {float:left; margin:0 2px 0 0}
+.searchWrap .sTopR .sch_dt_wrap input { margin:0}
+.searchWrap .sTopR select { height:20px; font-size:11px; font-family:arial; line-height:14px; border:1px solid #d3dfec}
+.searchWrap .sTopR input.input_text { width:190px; height:18px; line-height:18px; border:1px solid #d3dfec}
+.sTopR #sch_dt input { float:none}
+/* downList */
+.downList { width:100%; margin-bottom:20px; border-top:2px solid #6f8bb9; list-style:none}
+.downList li { overflow:hidden; width:100%; height:185px; border-bottom:1px solid #d3dfec}
+.downList li .thumbnail { float:left; width:202px; padding:15px 0 0 15px}
+.downList li div { float:right; width:460px; padding:15px}
+.downList li div dt,
+.downList li div dd{height:38px; font-weight:bold; line-height:1.5; vertical-align:top}
+.downList li div dt { padding:5px 0 0; color:#4b6ba4}
+.downList li div dt a { color:#4b6ba4}
+.downList li div dd { color:#555}
+.downList li div dd.explain { overflow-x:hidden; overflow-y:auto; font-weight:normal; height:73px}
